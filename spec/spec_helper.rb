@@ -11,5 +11,7 @@ RSpec.configure do |config|
   config.after(:each) do
     Event.all.each { |event| event.destroy }
     Task.all.each { |task| task.destroy }
+    Note.all.each { |note| note.destroy }
+    Repetition.all.each { |repetition| repetition.destroy }
   end
 end
